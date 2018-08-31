@@ -6,6 +6,9 @@ var http = require('http');
 // INITIALIZE THE GIPHY-API LIBRARY
 var giphy = require('giphy-api')();
 
+// Connects to the public folder
+app.use(express.static('public'));
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
